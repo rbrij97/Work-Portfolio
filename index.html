@@ -1,67 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Analyst Portfolio</title>
-    <!-- This script styles the page automatically -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Corporate Valuation & Financial Modeling Portfolio" />
+  <title>Financial Analyst — Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans antialiased">
+<body>
+  <!-- Subtle grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
 
-    <!-- Header Section -->
-    <header class="max-w-4xl mx-auto pt-20 pb-10 px-6 text-center">
-        <h1 class="text-4xl font-extrabold tracking-tight text-emerald-400 sm:text-5xl">Financial Analyst Portfolio</h1>
-        <p class="mt-4 text-xl text-slate-400">Corporate Valuation & Financial Modeling Portfolio</p>
-        <p class="mt-2 text-sm text-slate-500">Review my presentation-ready financial models below.</p>
-    </header>
+  <!-- Top navigation bar -->
+  <nav class="topbar">
+    <div class="topbar__brand">
+      <span class="mono">— PORTFOLIO / '26</span>
+    </div>
+    <div class="topbar__status">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span class="mono">Available for opportunities</span>
+    </div>
+  </nav>
 
-    <!-- Project Gallery -->
-    <main class="max-w-4xl mx-auto py-10 px-6">
-        <h2 class="text-2xl font-bold text-slate-200 mb-6 border-b border-slate-700 pb-2">Active Financial Models</h2>
-        
-        <div class="space-y-12">
-            
-            <!-- MODEL #1 CARD -->
-            <div class="bg-slate-800 rounded-xl border border-slate-700 overflow-hidden shadow-lg">
-                <!-- Displays your screenshot1.png -->
-                <img src="screenshot1.png" alt="Financial Model 1 Preview" class="w-full h-56 object-cover bg-slate-950">
-                <div class="p-6">
-                    <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-2.5 py-1 rounded">Excel Model 01</span>
-                    <h3 class="text-xl font-bold mt-3 text-slate-100">Core Financial Model & Analysis</h3>
-                    <p class="mt-2 text-slate-400">Integrated corporate financial model built to forecast operational performance, evaluate underlying value drivers, and map out growth assumptions.</p>
-                    <div class="mt-6">
-                        <!-- Downloads your model1.xlsx -->
-                        <a href="model1.xlsx" download class="bg-emerald-500 hover:bg-emerald-600 text-slate-950 text-sm font-bold py-2.5 px-5 rounded transition inline-flex items-center gap-2">
-                            📥 Download Excel Workbook
-                        </a>
-                    </div>
-                </div>
-            </div>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero__label">
+      <span class="mono">§ 001 — Financial Analyst</span>
+    </div>
 
-            <!-- MODEL #2 CARD -->
-            <div class="bg-slate-800 rounded-xl border border-slate-700 overflow-hidden shadow-lg">
-                <!-- Displays your screenshot2.png -->
-                <img src="screenshot2.png" alt="Financial Model 2 Preview" class="w-full h-56 object-cover bg-slate-950">
-                <div class="p-6">
-                    <span class="text-xs font-semibold uppercase tracking-wider text-cyan-400 bg-cyan-400/10 px-2.5 py-1 rounded">Excel Model 02</span>
-                    <h3 class="text-xl font-bold mt-3 text-slate-100">Advanced Valuation & Risk Architecture</h3>
-                    <p class="mt-2 text-slate-400">Comprehensive valuation analysis using structured Excel calculation frameworks, tracking core performance metrics and sensitivity matrices.</p>
-                    <div class="mt-6">
-                        <!-- Downloads your model2.xlsx -->
-                        <a href="model2.xlsx" download class="bg-cyan-500 hover:bg-cyan-600 text-slate-950 text-sm font-bold py-2.5 px-5 rounded transition inline-flex items-center gap-2">
-                            📥 Download Excel Workbook
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <h1 class="hero__title">
+      <span class="reveal" style="--d:0.05s">Corporate</span>
+      <span class="reveal italic" style="--d:0.15s">Valuation</span>
+      <span class="reveal" style="--d:0.25s">&amp; Financial</span>
+      <span class="reveal italic" style="--d:0.35s">Modeling.</span>
+    </h1>
 
+    <p class="hero__lede reveal" style="--d:0.5s">
+      A focused collection of presentation-ready Excel models —
+      built to forecast performance, surface value drivers, and
+      pressure-test assumptions with sensitivity analysis.
+    </p>
+
+    <div class="hero__meta reveal" style="--d:0.65s">
+      <span class="mono">Selected works ↓</span>
+      <span class="mono">02 / Projects</span>
+    </div>
+  </header>
+
+  <!-- WORK -->
+  <main class="work" id="work">
+    <div class="section-head">
+      <span class="mono">§ 002</span>
+      <span class="section-head__title">Selected Work</span>
+      <span class="rule"></span>
+      <span class="mono">Updated · 2026</span>
+    </div>
+
+    <!-- PROJECT 01 -->
+    <article class="project">
+      <div class="project__index mono">01</div>
+
+      <div class="project__media">
+        <a href="model1.xlsx" download class="project__image-link" aria-label="Download Model 01">
+          <img src="screenshot1.png" alt="Core Financial Model preview" />
+          <span class="project__image-overlay mono">View workbook ↗</span>
+        </a>
+      </div>
+
+      <div class="project__body">
+        <div class="project__tags">
+          <span class="tag mono">DCF</span>
+          <span class="tag mono">Forecasting</span>
+          <span class="tag mono">Operating Model</span>
         </div>
-    </main>
 
-    <footer class="text-center py-10 text-xs text-slate-500 border-t border-slate-800 max-w-4xl mx-auto">
-        Financial Analyst Portfolio &copy; 2026. Hosted via GitHub Pages.
-    </footer>
+        <h2 class="project__title">
+          Core Financial <em>Model</em> &amp; Analysis
+        </h2>
 
+        <p class="project__desc">
+          An integrated corporate financial model built to forecast
+          operational performance, evaluate underlying value drivers,
+          and map out long-term growth assumptions across multiple
+          scenarios.
+        </p>
+
+        <a href="model1.xlsx" download class="btn">
+          <span>Download workbook</span>
+          <span class="btn__arrow" aria-hidden="true">→</span>
+          <span class="btn__ext mono">.xlsx</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- PROJECT 02 -->
+    <article class="project project--reverse">
+      <div class="project__index mono">02</div>
+
+      <div class="project__media">
+        <a href="model2.xlsx" download class="project__image-link" aria-label="Download Model 02">
+          <img src="screenshot2.png" alt="Advanced Valuation Model preview" />
+          <span class="project__image-overlay mono">View workbook ↗</span>
+        </a>
+      </div>
+
+      <div class="project__body">
+        <div class="project__tags">
+          <span class="tag mono">Valuation</span>
+          <span class="tag mono">Sensitivity</span>
+          <span class="tag mono">Risk Matrix</span>
+        </div>
+
+        <h2 class="project__title">
+          Advanced Valuation &amp; <em>Risk</em> Architecture
+        </h2>
+
+        <p class="project__desc">
+          A comprehensive valuation analysis using structured Excel
+          calculation frameworks — tracking core performance metrics,
+          stress-tested scenarios, and detailed sensitivity matrices.
+        </p>
+
+        <a href="model2.xlsx" download class="btn">
+          <span>Download workbook</span>
+          <span class="btn__arrow" aria-hidden="true">→</span>
+          <span class="btn__ext mono">.xlsx</span>
+        </a>
+      </div>
+    </article>
+  </main>
+
+  <!-- CONTACT BAND -->
+  <section class="contact">
+    <div class="contact__inner">
+      <span class="mono">§ 003 — Contact</span>
+      <h3 class="contact__line">
+        Looking for an analyst who <em>builds the model</em>,
+        not just reads it?
+      </h3>
+      <a href="mailto:your.email@example.com" class="btn btn--ghost">
+        <span>Get in touch</span>
+        <span class="btn__arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__col mono">Financial Analyst Portfolio</div>
+    <div class="footer__col mono">© 2026 · All rights reserved</div>
+    <div class="footer__col mono">Hosted · GitHub Pages</div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
